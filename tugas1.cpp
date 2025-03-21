@@ -16,10 +16,10 @@ private:
 };
 
 istream &operator>>(istream &inp, Ktp &ktp) {
-    cout << "Masukkan Provinsi: ";
+    cout << "Masukkan Provinsi(Kapital): ";
     getline(inp, ktp.prov);
 
-    cout << "Masukkan Kota/Kabupaten: ";
+    cout << "Masukkan Kota/Kabupaten(Kapital): ";
     getline(inp, ktp.kab);
 
     cout << "Masukkan NIK: ";
@@ -75,7 +75,27 @@ istream &operator>>(istream &inp, Ktp &ktp) {
 
 ostream &operator<<(ostream &out, const Ktp &ktp) {
 
-    //output
+
+    out << "\n|=======================================================================|" << endl;
+    out << "|                        KARTU TANDA PENDUDUK                           |" << endl; 
+    out << "|=======================================================================|" << endl;
+    out << "                          PROVINSI " << ktp.prov << endl;
+    out << "                              " << ktp.kab << endl;
+    out << endl;
+    out << "NIK                          :" << ktp.nik << endl;
+    out << "Nama                         :" << ktp.nama << endl;
+    out << "Tempat/Tanggal lahir         :" << ktp.tempatTanggal << endl;
+    out << "Jenis Kelamin                :" << ktp.jenis <<"                   Gol. Darah: "<< ktp.gol << endl;
+    out << "Alamat                       :" << ktp.alamat << endl;
+    out << "    RT/RW                          :" << ktp.rt << "/" << ktp.rw << endl;
+    out << "    Kel/Desa                       :" << ktp.desa << endl;
+    out << "    Kecamatan                      :" << ktp.camat << endl;
+    out << "Agama                        :" << ktp.agama << endl;
+    out << "Status Perkawinan            :" << ktp.status << endl;
+    out << "Pekerjaan                    :" << ktp.pekerjaan << endl;
+    out << "Kewarganegaraan              :" << ktp.kewarganegaraan << endl;
+    out << "Masa Berlaku                 :" << ktp.masaBerlaku << endl;
+    out << "==============================================" << endl;
     return out;
 }
 
