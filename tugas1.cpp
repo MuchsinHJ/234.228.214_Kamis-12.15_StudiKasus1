@@ -82,5 +82,5 @@ ostream &operator<<(ostream &out, const Ktp &ktp) {
 int main() {
     Ktp biodata;
     cin >> biodata;
-    cout << biidata;
+    cout << biodata;
 }
