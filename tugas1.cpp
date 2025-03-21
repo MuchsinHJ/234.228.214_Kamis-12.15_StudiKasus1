@@ -7,12 +7,11 @@ class Ktp {
     friend istream &operator>>(istream &inp, Ktp &ktp);
 
 public:
-    Ktp() : rt(0), rw(0) {}
+    // Ktp() : rt(0), rw(0) {}
 
 private:
-    string nik, nama, prov, kab, tempatTanggal, jenis, alamat, desa, camat, agama, status, pekerjaan, kewarganegaraan, masaBerlaku;
+    string nik, nama, prov, kab, tempatTanggal, jenis, alamat, desa, camat, agama, status, pekerjaan, kewarganegaraan, masaBerlaku, gol;
     int rt, rw;
-    char gol;
 };
 
 istream &operator>>(istream &inp, Ktp &ktp) {
@@ -75,27 +74,26 @@ istream &operator>>(istream &inp, Ktp &ktp) {
 
 ostream &operator<<(ostream &out, const Ktp &ktp) {
 
-
-    out << "\n|=======================================================================|" << endl;
-    out << "|                        KARTU TANDA PENDUDUK                           |" << endl; 
-    out << "|=======================================================================|" << endl;
-    out << "                          PROVINSI " << ktp.prov << endl;
+    out << "\n|==============================================================================|" << endl;
+    out << "|                             KARTU TANDA PENDUDUK                             |" << endl; 
+    out << "|==============================================================================|" << endl;
+    out << "                         PROVINSI " << ktp.prov << endl;
     out << "                              " << ktp.kab << endl;
     out << endl;
-    out << "NIK                          :" << ktp.nik << endl;
-    out << "Nama                         :" << ktp.nama << endl;
-    out << "Tempat/Tanggal lahir         :" << ktp.tempatTanggal << endl;
-    out << "Jenis Kelamin                :" << ktp.jenis <<"                   Gol. Darah: "<< ktp.gol << endl;
-    out << "Alamat                       :" << ktp.alamat << endl;
-    out << "    RT/RW                          :" << ktp.rt << "/" << ktp.rw << endl;
-    out << "    Kel/Desa                       :" << ktp.desa << endl;
-    out << "    Kecamatan                      :" << ktp.camat << endl;
-    out << "Agama                        :" << ktp.agama << endl;
-    out << "Status Perkawinan            :" << ktp.status << endl;
-    out << "Pekerjaan                    :" << ktp.pekerjaan << endl;
-    out << "Kewarganegaraan              :" << ktp.kewarganegaraan << endl;
-    out << "Masa Berlaku                 :" << ktp.masaBerlaku << endl;
-    out << "==============================================" << endl;
+    out << "NIK                          : " << ktp.nik << endl;
+    out << "Nama                         : " << ktp.nama << endl;
+    out << "Tempat/Tanggal lahir         : " << ktp.tempatTanggal << endl;
+    out << "Jenis Kelamin                : " << ktp.jenis <<"\t\t\tGol. Darah: "<< ktp.gol << endl;
+    out << "Alamat                       : " << ktp.alamat << endl;
+    out << "\tRT/RW                          : " << ktp.rt << "/" << ktp.rw << endl;
+    out << "\tKel/Desa                       : " << ktp.desa << endl;
+    out << "\tKecamatan                      : " << ktp.camat << endl;
+    out << "Agama                        : " << ktp.agama << endl;
+    out << "Status Perkawinan            : " << ktp.status << endl;
+    out << "Pekerjaan                    : " << ktp.pekerjaan << endl;
+    out << "Kewarganegaraan              : " << ktp.kewarganegaraan << endl;
+    out << "Masa Berlaku                 : " << ktp.masaBerlaku << endl;
+    out << "|==============================================================================|" << endl;
     return out;
 }
 
