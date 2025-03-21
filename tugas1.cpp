@@ -75,6 +75,7 @@ istream &operator>>(istream &inp, Ktp &ktp) {
 
 ostream &operator<<(ostream &out, const Ktp &ktp) {
 
+
     out << "\n|=======================================================================|" << endl;
     out << "|                        KARTU TANDA PENDUDUK                           |" << endl; 
     out << "|=======================================================================|" << endl;
