@@ -1,37 +1,86 @@
 #include <iostream>
 #include <string>
-#include <fstream>
-
 using namespace std;
 
 class Ktp {
-  friend ostream &operator << (ostream &out, const Ktp &ktp);
-  friend istream &operator >> (istream &inp,Ktp &ktp);
-  public:
+    friend ostream &operator<<(ostream &out, const Ktp &ktp);
+    friend istream &operator>>(istream &inp, Ktp &ktp);
 
-  private:
-  string nik, prov, kab, nama, tempatTanggal,jenis, alamat, desa, camat, agama, status, pelerjaan;
-  int rt, rw;
-  char gol;
+public:
+    Ktp() : rt(0), rw(0) {}
+
+private:
+    string nik, nama, prov, kab, tempatTanggal, jenis, alamat, desa, camat, agama, status, pekerjaan, kewarganegaraan, masaBerlaku;
+    int rt, rw;
+    char gol;
 };
-istream &operator>>(istream &inp,Ktp &ktp){
-  //Isi input dan output buat masukkin data
-  cout << "Masukkan NIK anda: ";
-  //ganti cin jadi inp
-  inp >> ktp.nik;
 
-  return inp;
+istream &operator>>(istream &inp, Ktp &ktp) {
+    cout << "Masukkan Provinsi: ";
+    getline(inp, ktp.prov);
+
+    cout << "Masukkan Kota/Kabupaten: ";
+    getline(inp, ktp.kab);
+
+    cout << "Masukkan NIK: ";
+    inp >> ktp.nik;
+    inp.ignore();
+
+    cout << "Masukkan Nama: ";
+    getline(inp, ktp.nama);
+
+    cout << "Masukkan Tempat/Tanggal Lahir: ";
+    getline(inp, ktp.tempatTanggal);
+
+    cout << "Masukkan Jenis Kelamin: ";
+    getline(inp, ktp.jenis);
+
+    cout << "Masukkan Golongan Darah: ";
+    inp >> ktp.gol;
+    inp.ignore();
+
+    cout << "Masukkan Alamat: ";
+    getline(inp, ktp.alamat);
+
+    cout << "Masukkan RT: ";
+    inp >> ktp.rt;
+
+    cout << "Masukkan RW: ";
+    inp >> ktp.rw;
+    inp.ignore();
+
+    cout << "Masukkan Kelurahan/Desa: ";
+    getline(inp, ktp.desa);
+
+    cout << "Masukkan Kecamatan: ";
+    getline(inp, ktp.camat);
+
+    cout << "Masukkan Agama: ";
+    getline(inp, ktp.agama);
+
+    cout << "Masukkan Status Perkawinan: ";
+    getline(inp, ktp.status);
+
+    cout << "Masukkan Pekerjaan: ";
+    getline(inp, ktp.pekerjaan);
+
+    cout << "Masukkan Kewarganegaraan: ";
+    getline(inp, ktp.kewarganegaraan);
+
+    cout << "Masukkan Masa Berlaku: ";
+    getline(inp, ktp.masaBerlaku);
+
+    return inp;
 }
-ostream &operator<<(ostream &out, const Ktp &ktp){
-  //isi untuk keluaran outputnya atau tampilan ktp nya
-  // ganti cout jadi out
-  out << "NIK: " << ktp.nik;
 
-  return out;
+ostream &operator<<(ostream &out, const Ktp &ktp) {
+
+    //output
+    return out;
 }
 
-int main(){
-  Ktp biodata;
-  cin >> biodata;
-  cout << biodata;
+int main() {
+    Ktp biodata;
+    cin >> biodata;
+    cout << biidata;
 }
