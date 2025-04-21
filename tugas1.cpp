@@ -10,7 +10,8 @@ public:
     // Ktp() : rt(0), rw(0) {}
 
 private:
-    string nik, nama, prov, kab, tempatTanggal, jenis, alamat, desa, camat, agama, status, pekerjaan, kewarganegaraan, masaBerlaku, gol;
+    string nik, nama, prov, kab, tempatTanggal, jenis, alamat, desa, camat, agama, status, pekerjaan, kewarganegaraan, masaBerlaku;
+    char gol[3];
     int rt, rw;
 };
 
