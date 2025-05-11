@@ -7,7 +7,6 @@ class Ktp {
     friend istream &operator>>(istream &inp, Ktp &ktp);
 
 public:
-    // Ktp() : rt(0), rw(0) {}
 
 private:
     string nik, nama, prov, kab, tempatTanggal, jenis, alamat, desa, camat, agama, status, pekerjaan, kewarganegaraan, masaBerlaku;
